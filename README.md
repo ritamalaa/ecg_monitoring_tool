@@ -22,7 +22,7 @@ It will generate simulated ECG data every second and send it to connected client
 ### **2. Start the WebSocket Client**  
 In a separate terminal, run:
 ```bash
-go run client/client.go
+go run ./client/client.go
 ```
 The client will connect to the server and begin receiving ECG data.
 If anomalies are detected (e.g., Tachycardia, Bradycardia, Arrhythmia), they will be logged in the console and ecg_alerts.log.
