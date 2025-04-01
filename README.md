@@ -13,15 +13,17 @@ Follow these steps to run the ECG WebSocket Simulator:
 
 ### **1. Start the WebSocket Server**  
 Run the following command to start the server:
-
+```bash
 go run ./server/server.go
+```
 The server will start and listen on ws://localhost:8080/ws.
 It will generate simulated ECG data every second and send it to connected clients.
 
 ### **2. Start the WebSocket Client**  
 In a separate terminal, run:
-
+```bash
 go run client/client.go
+```
 The client will connect to the server and begin receiving ECG data.
 If anomalies are detected (e.g., Tachycardia, Bradycardia, Arrhythmia), they will be logged in the console and ecg_alerts.log.
 
@@ -29,6 +31,11 @@ If anomalies are detected (e.g., Tachycardia, Bradycardia, Arrhythmia), they wil
 
 To run unit tests for ECG data processing:
 
+```bash
 go test -v ./client/
+```
 This will execute ecg_test.go and verify that the ECG processing logic works correctly.
+
+
+
 
